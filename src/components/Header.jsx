@@ -1,0 +1,42 @@
+import logo from "../img/GlowQueen.svg";
+import vector from "../img/Vector1.svg";
+import search from "../img/Search.svg";
+import shopping from "../img/img/ShoppingBag.svg";
+
+function Header() {
+    return(
+    <div className="container">
+    <header className="header">
+      <figure>
+        <img src={logo} alt="Logotipo GlowQueen"/>
+        <figcaption className="sr-only">Logotipo GlowQueen</figcaption>
+      </figure>
+
+{/* Nav central */}
+      <nav className="center" aria-label="Principal">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Facilities</a></li>
+          <li><a href="#">More <img src={vector} alt="" arial-hidden="true"/></a></li>
+        </ul>
+      </nav>
+
+{/*Iconos + auth*/}
+      <nav className="aside" aria-label="Acciones">
+        <ul className="icons">
+          <li><a href="#"><img src={search} alt="Buscar"/></a></li>
+          <li><a href="#"><img src={shopping} alt="Carrito"/></a></li>
+        </ul>
+        <ul className="auth">
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    </div>
+    );
+}
+
+export default Header;
