@@ -7,19 +7,19 @@ function Testimonials() {
     return(
     <div>
         <section className="treatments">
-          <article>
+          <article className="treatment-card">
             <img src={Face} alt="Face massage" />
             <h2>15 +</h2>
             <p>Special Treatment</p>
           </article>
 
-          <article>
+          <article className="treatment-card">
             <img src={Lotus} alt="Lotus" />
             <h2>25 +</h2>
             <p>Professional Therapist</p>
           </article>
 
-          <article>
+          <article className="treatment-card">
             <img src={Mortar} alt="Mortar" />
             <h2>100%</h2>
             <p>
@@ -29,7 +29,7 @@ function Testimonials() {
         </section>
 
         <section className="testimonials" aria-label="testimonials">
-          <article className="comment1">
+          <article className="comment comment1">
             <p>
               <img src={Quotes} alt="" aria-hidden="true" />
               <br />
@@ -40,7 +40,7 @@ function Testimonials() {
             <span className="author">Sophia Princeton</span>
           </article>
 
-          <article className="comment2">
+          <article className="comment comment2">
             <p>
               <img src={Quotes} alt="" aria-hidden="true" />
               <br />

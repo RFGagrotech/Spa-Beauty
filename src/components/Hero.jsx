@@ -11,18 +11,23 @@ function Hero() {
           <h1>Bring back the beauty and glow of your skin</h1>
           <p>We provide you various treatments from head to toe using the best product, advanced technology, 
             and affordable price</p>
+          <div className="hero-actions">
           <button type="button">Book now</button>
           <button type="button">
             <span className="circle"><img src={play} alt="" aria-hidden="true"/></span>
             <span>Watch video</span>
           </button>
-        </div>
+          </div>
+      </div>
 
      {/*Bloque de imágenes del hero*/}
         <div className="hero-media" aria-hidden="true">
           <div className="hero-panel"></div>
-          <img className="hero-woman" src={woman} srcSet={`${woman} 1x, ${woman1} 2x`} alt=""/>
-          <img className="hero-vector" src={vector} alt=""/>
+          <img className="hero-woman" 
+          src={woman} 
+          srcSet={`${woman} 1x, ${woman1} 2x`} 
+          alt="Woman receiving beauty treatment"/>
+          <img className="hero-vector" src={vector} aria-hidden="true" />
         </div>
       </div>
     </section>

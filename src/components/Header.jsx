@@ -1,7 +1,7 @@
 import logo from "../img/GlowQueen.svg";
 import vector from "../img/Vector1.svg";
 import search from "../img/Search.svg";
-import shopping from "../img/img/ShoppingBag.svg";
+import shopping from "../img/ShoppingBag.svg";
 
 function Header() {
     return(
@@ -19,7 +19,7 @@ function Header() {
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Facilities</a></li>
-          <li><a href="#">More <img src={vector} alt="" arial-hidden="true"/></a></li>
+          <li><a href="#">More <img src={vector} alt="" aria-hidden="true"/></a></li>
         </ul>
       </nav>
 
