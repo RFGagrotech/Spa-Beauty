@@ -1,0 +1,65 @@
+.hero {
+    padding: 2rem 1rem 3rem;
+    overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 2rem;
+}
+
+.hero-text {
+  z-index: 2;
+
+  h1 {
+    max-width: 18rem;
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 1.05;
+    color: #253e72;
+  }
+
+  p {
+    max-width: 20rem;
+    margin-top: 1rem;
+    color: #4f5f5a;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-media {
+  position: relative;
+  min-height: 22rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-panel {
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  height: 70%;
+  background: #ddefd8;
+  border-radius: 8rem 8rem 0 0;
+  z-index: 0;
+}
+
+.hero-woman {
+  position: relative;
+  z-index: 2;
+  width: min(75%, 16rem);
+}
+
+.hero-vector {
+  position: absolute;
+  bottom: -4rem;
+  width: 14rem;
+  z-index: 1;
+  opacity: 0.9;
+}
