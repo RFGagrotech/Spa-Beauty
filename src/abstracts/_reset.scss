@@ -33,3 +33,10 @@ button {
     background: none;
     font: inherit;
 }   
+
+img, 
+picture {
+    max-width: 100%;
+    display:block;
+}
+
