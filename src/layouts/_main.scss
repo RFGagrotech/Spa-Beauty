@@ -1,16 +1,15 @@
 .hero {
   padding: 2rem 1rem 3rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-inner {
-  display: flex;
-  flex-direction: column;
   display: grid;
   grid-template-areas:
     "text"
-    "media";
-  gap: 2rem;
+    "media"
+    "actions";
+  gap: 1.5rem;
 }
 
 .hero-text {
@@ -20,66 +19,57 @@
   h1 {
     font-size: 1.75rem;
     font-weight: 700;
-    padding: 1.5rem 0.5rem;
+    padding-bottom: 1.2rem;
   }
 
   p {
     font-size: 1.2rem;
-    padding: 0 1rem;
   }
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
 }
 
 .hero-media {
   grid-area: media;
   position: relative;
-  min-height: 22rem;
   display: flex;
+  width: calc(100% + 2rem);;
+  min-height: 19rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
   justify-content: center;
   align-items: flex-end;
+  background: #ddefd8;
 }
 
 .hero-panel {
-  position: absolute;
-  bottom: 0;
-  width: 75%;
-  height: 70%;
-  background: #ddefd8;
-  border-radius: 8rem 8rem 0 0;
-  z-index: 0;
-}
-
-.hero-woman {
-  position: relative;
-  z-index: 2;
-  width: min(75%, 20rem);
+display: none;
 }
 
 .hero-vector {
   position: absolute;
-  bottom: -4rem;
-  width: 14rem;
+  bottom: 1rem;
+  width: 19rem;
   z-index: 1;
+  
 }
 
+.hero-woman {
+  position: relative;
+  width: 28rem;
+  max-width: none;
+  z-index: 2;
+}
 
-
-
-
-
-
-
+.hero-actions {
+  grid-area: actions;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0;
+}
 
 @media (min-width: 48em) {
   .hero-inner {
-    grid-template-areas: "text media";
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
@@ -92,3 +82,5 @@
     justify-content: flex-start;
   }
 }
+
+

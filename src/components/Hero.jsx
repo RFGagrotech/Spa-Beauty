@@ -16,8 +16,15 @@ function Hero() {
           </p>
         </div>
 
-        <div className="hero-media" aria-hidden="true">
+        <div className="hero-media">
           <div className="hero-panel"></div>
+
+          <img
+            className="hero-vector"
+            src={vector}
+            alt=""
+            aria-hidden="true"
+          />
 
           <img
             className="hero-woman"
@@ -25,14 +32,14 @@ function Hero() {
             srcSet={`${woman} 1x, ${woman1} 2x`}
             alt="Woman receiving beauty treatment"
           />
-
-          <img className="hero-vector" src={vector} alt="" aria-hidden="true" />
         </div>
 
         <div className="hero-actions">
-          <button type="button">Book now</button>
+          <button className="hero-btn hero-btn-primary" type="button">
+            Book now
+          </button>
 
-          <button type="button">
+          <button className="hero-btn hero-btn-video" type="button">
             <span className="circle">
               <img src={play} alt="" aria-hidden="true" />
             </span>
