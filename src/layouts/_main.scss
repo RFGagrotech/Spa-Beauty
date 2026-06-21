@@ -81,19 +81,62 @@ display: none;
   transition: 0.3s ease;
 }
 
+// Versión IPAD
 @media (min-width: 48em) {
+  .hero {
+    padding: 3rem 2rem;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "text media"
+      "actions media";
     align-items: center;
+    column-gap: 2rem;
   }
 
   .hero-text {
     text-align: left;
+    padding-inline: 0;
+
+    h1 {
+      padding: 0;
+      font-size: clamp(2.75rem, 5vw, 4rem);
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      max-width: 28rem;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
   }
 
   .hero-actions {
     justify-content: flex-start;
+    padding-inline: 0;
+    margin-top: 1rem;
+  }
+
+  .hero-media {
+    min-height: 32rem;
+    border-radius: 0 0 0 6rem;
+  }
+
+  .hero-vector {
+    width: min(24rem, 42vw);
+    bottom: 3rem;
+    transform: translateY(-6rem);
+  }
+
+  .hero-woman {
+    width: min(40rem, 125vw);
+    height: auto;
   }
 }
 
+//Versión DESKTOP
 

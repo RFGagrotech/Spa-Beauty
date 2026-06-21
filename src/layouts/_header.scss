@@ -1,5 +1,7 @@
 @use "../abstracts" as abs;
 
+//Versión MOBILE
+
 .header {
   position: relative;
   width: 100%;
@@ -109,10 +111,7 @@
   white-space: nowrap;
   border: 0;
 }
-
-// ======================
 // DESKTOP
-// ======================
 
 @media (min-width: 75em) {
   .header {
