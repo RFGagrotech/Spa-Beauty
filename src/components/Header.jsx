@@ -8,9 +8,8 @@ function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
 
     return(
-    <div className="container">
     <header className="header">
-      <figure>
+      <figure className="header__logo">
         <img src={logo} alt="Logotipo GlowQueen"/>
         <figcaption className="sr-only">Logotipo GlowQueen</figcaption>
       </figure>
@@ -26,7 +25,7 @@ function Header() {
         </button>
         
 {/* Nav central */}
-      <div div className={`header__menu ${menuOpen ? "header__menu--open" : ""}`}>
+      <div className={`header__menu ${menuOpen ? "header__menu--open" : ""}`}>
         <nav className="center" aria-label="Principal">
           <ul>
             <li><a href="#">Home</a></li>
@@ -50,7 +49,6 @@ function Header() {
         </nav>
       </div>
     </header>
-    </div>
     );
 }
 
