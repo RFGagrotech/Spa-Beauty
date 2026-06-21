@@ -1,5 +1,6 @@
 .hero {
-  overflow: visible;
+  overflow: hidden;
+  width: 100%;
 }
 
 .hero-inner {
@@ -9,20 +10,22 @@
     "media"
     "actions";
   gap: 1.5rem;
+  width: 100%;
 }
 
 .hero-text {
   grid-area: text;
   text-align: center;
+  padding-inline: 1rem;
 
   h1 {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
     font-weight: 700;
-    padding-bottom: 1.2rem;
+    padding: 1rem 0.7rem;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 5vw,1.2rem);
   }
 }
 
@@ -30,13 +33,12 @@
   grid-area: media;
   position: relative;
   display: flex;
-  width: calc(100% + 2rem);;
-  min-height: 19rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  width: 100%;
+  min-height: 15rem;
   justify-content: center;
   align-items: flex-end;
   background: #ddefd8;
+  overflow: hidden;
 }
 
 .hero-panel {
@@ -46,15 +48,16 @@ display: none;
 .hero-vector {
   position: absolute;
   bottom: 1rem;
-  width: 19rem;
+  width: min(19rem,85vw);
   z-index: 1;
-  
+  opacity: 0.25;
 }
 
 .hero-woman {
   position: relative;
-  width: 28rem;
+  width: min(32rem, 125vw);
   max-width: none;
+  height: auto;
   z-index: 2;
 }
 
@@ -64,7 +67,18 @@ display: none;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 0;
+  padding-inline: 1rem;
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid #264065;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 @media (min-width: 48em) {
