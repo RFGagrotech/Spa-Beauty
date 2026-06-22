@@ -13,11 +13,6 @@
   background-color: #f4f8f2;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 
-  img {
-    width: 3rem;
-    height: 3rem;
-  }
-
   h2 {
     font-size: 1.5rem;
     color: #253e72;
@@ -26,6 +21,17 @@
   p {
     font-size: 0.9rem;
     color: #4f5f5a;
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -55,7 +61,6 @@
   .author {
     display: block;
     margin-top: 1rem;
-
     font-weight: 700;
     color: #253e72;
   }
@@ -65,4 +70,32 @@
   height: 4rem;
   background-color: #ddefd8;
   border-radius: 2rem 2rem 0 0;
+}
+
+/* =========================
+   IPAD
+========================= */
+
+@media (min-width: 48rem) {
+  .icon-wrapper {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background-color: #ddefd8;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
 }
