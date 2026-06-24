@@ -158,8 +158,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: clamp(3rem, 3.5vw, 4rem);
-    margin-left: clamp(9rem, 12vw, 16rem);
+    gap: clamp(4rem, 4.5vw, 5rem);
+    margin-left: clamp(5rem, 8vw, 12rem);
   }
 
   .header .center ul li a {
@@ -181,6 +181,7 @@
     align-items: center;
     gap: 3rem;
     margin-right: clamp(2rem, 4vw, 6rem);
+    white-space: nowrap;
   }
 
   .header .aside .icons img:hover {

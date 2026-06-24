@@ -139,4 +139,10 @@ display: none;
 }
 
 //Versión DESKTOP
-
+@media (min-width:75rem){
+  .hero-media {
+    margin-left: clamp(12rem, 14vw, 16rem);
+    height: 40rem;
+    top:-10rem;
+  }
+}
