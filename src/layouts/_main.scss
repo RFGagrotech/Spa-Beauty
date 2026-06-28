@@ -138,11 +138,99 @@ display: none;
   }
 }
 
-//Versión DESKTOP
-@media (min-width:75rem){
+
+// DESKTOP
+@media (min-width: 75rem) {
+  .hero {
+    position: relative;
+    padding: 0;
+    overflow: visible;
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 66%,
+      #d6e8cf 66%,
+      #d6e8cf 100%
+    );
+  }
+
+  .hero-inner {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 5.5rem);
+    display: grid;
+    grid-template-columns: 66% 34%;
+    grid-template-areas:
+      "text media"
+      "actions media";
+    align-items: center;
+    column-gap: 0;
+    padding-inline: 0;
+  }
+
+  .hero-text {
+    align-self: end;
+    justify-self: center;
+    width: min(42rem, 72%);
+    padding-inline: 0;
+    text-align: left;
+    z-index: 5;
+
+    h1 {
+      margin: 0;
+      max-width: 42rem;
+      font-size: clamp(4rem, 4.7vw, 5.4rem);
+      line-height: 1.15;
+      text-align: left;
+    }
+
+    p {
+      max-width: 40rem;
+      margin-top: 2rem;
+      font-size: clamp(1.2rem, 1.35vw, 1.55rem);
+      line-height: 1.6;
+      text-align: left;
+    }
+  }
+
+  .hero-actions {
+    align-self: start;
+    justify-self: center;
+    width: min(42rem, 72%);
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+    padding-inline: 0;
+    z-index: 5;
+  }
+
   .hero-media {
-    margin-left: clamp(12rem, 14vw, 16rem);
-    height: 40rem;
-    top:-10rem;
+    position: relative;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+    min-height: calc(100vh - 5.5rem);
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .hero-vector {
+    position: absolute;
+    left: 50%;
+    bottom: 8rem;
+    width: min(43rem, 46vw);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .hero-woman {
+    position: absolute;
+    right: clamp(2rem, 4vw, 6rem);
+    bottom: 0;
+    height: calc(100vh - 5.5rem);
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    z-index: 2;
   }
 }
