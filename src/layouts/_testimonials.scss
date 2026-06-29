@@ -102,18 +102,14 @@
 
 // DESKTOP
 @media (min-width: 75rem) {
-  main {
-    position: relative;
-  }
-
   .treatments {
     position: absolute;
     left: clamp(3rem, 4vw, 5rem);
-    bottom: -11rem;
+    bottom: clamp(2rem, 5vh, 4rem);
     width: min(38rem, 38vw);
     padding: 1.75rem 2rem;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: clamp(1rem, 1.5vw, 2rem);
     background: #ffffff;
     border-radius: 1.25rem;
@@ -121,52 +117,9 @@
     z-index: 20;
   }
 
-  .treatment-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    text-align: center;
-
-    h2 {
-      margin-top: 1.4rem;
-      font-size: clamp(1.9rem, 2vw, 2.4rem);
-      font-weight: 600;
-      color: #264065;
-    }
-
-    p {
-      margin-top: 0.75rem;
-      font-size: clamp(0.85rem, 0.9vw, 1rem);
-      line-height: 1.35;
-      color: #909090;
-    }
-  }
-
-  .icon-wrapper {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background: #a9d6cb;
-    display: grid;
-    place-items: center;
-
-    &::before {
-      display: none;
-    }
-
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-
   .testimonials {
     position: absolute;
     inset: 0;
-    display: block;
     padding: 0;
     pointer-events: none;
     z-index: 30;
@@ -180,25 +133,6 @@
     background: rgba(255, 255, 255, 0.42);
     border: 1px solid rgba(255, 255, 255, 0.65);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
-
-    p {
-      margin: 0;
-      font-size: clamp(0.85rem, 0.9vw, 1rem);
-      line-height: 1.45;
-      color: #101010;
-    }
-
-    img {
-      width: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .author {
-      display: block;
-      margin-top: 0.75rem;
-      font-weight: 700;
-      color: #264065;
-    }
   }
 
   .comment1 {
@@ -207,8 +141,8 @@
   }
 
   .comment2 {
-    bottom: clamp(4rem, 9vh, 8rem);
-    right: clamp(8rem, 11vw, 14rem);
+    top: clamp(18rem, 38vh, 27rem);
+    right: clamp(1rem, 1vw, 3rem);
   }
 
   .footer-band {

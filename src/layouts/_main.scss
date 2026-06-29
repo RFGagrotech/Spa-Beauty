@@ -141,6 +141,12 @@ display: none;
 
 // DESKTOP
 @media (min-width: 75rem) {
+  .home-main {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 5.5rem);
+  }
+
   .hero {
     position: relative;
     padding: 0;
@@ -156,23 +162,21 @@ display: none;
 
   .hero-inner {
     position: relative;
-    width: 100%;
     min-height: calc(100vh - 5.5rem);
     display: grid;
     grid-template-columns: 66% 34%;
+    grid-template-rows: 1fr auto 1fr;
     grid-template-areas:
       "text media"
-      "actions media";
-    align-items: center;
-    column-gap: 0;
-    padding-inline: 0;
+      "actions media"
+      ". media";
   }
 
   .hero-text {
+    grid-area: text;
     align-self: end;
     justify-self: center;
     width: min(42rem, 72%);
-    padding-inline: 0;
     text-align: left;
     z-index: 5;
 
@@ -194,30 +198,29 @@ display: none;
   }
 
   .hero-actions {
+    grid-area: actions;
     align-self: start;
     justify-self: center;
     width: min(42rem, 72%);
     justify-content: flex-start;
     margin-top: 2.5rem;
-    padding-inline: 0;
     z-index: 5;
   }
 
   .hero-media {
+    grid-area: media;
     position: relative;
     align-self: stretch;
-    justify-self: stretch;
     width: 100%;
     min-height: calc(100vh - 5.5rem);
     background: transparent;
-    border-radius: 0;
     overflow: visible;
   }
 
   .hero-vector {
     position: absolute;
     left: 50%;
-    bottom: 8rem;
+    bottom: 7rem;
     width: min(43rem, 46vw);
     transform: translateX(-50%);
     z-index: 1;
@@ -225,12 +228,13 @@ display: none;
 
   .hero-woman {
     position: absolute;
-    right: clamp(2rem, 4vw, 6rem);
+    right: clamp(1rem, 3vw, 5rem);
     bottom: 0;
     height: calc(100vh - 5.5rem);
     width: auto;
     max-width: none;
     object-fit: contain;
+    object-position: bottom right;
     z-index: 2;
   }
 }
