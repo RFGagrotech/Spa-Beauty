@@ -104,17 +104,55 @@
 @media (min-width: 75rem) {
   .treatments {
     position: absolute;
-    left: clamp(3rem, 4vw, 5rem);
-    bottom: clamp(2rem, 5vh, 4rem);
-    width: min(38rem, 38vw);
-    padding: 1.75rem 2rem;
+    left: 31%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    width: clamp(23rem, 29vw, 34rem);
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1rem, 1.5vw, 2rem);
+    gap: clamp(1rem, 1.4vw, 1.5rem);
     background: #ffffff;
     border-radius: 1.25rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.08);
     z-index: 20;
+  }
+
+  .treatment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 11rem;
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2rem, 2.5vw, 2.6rem);
+      line-height: 1;
+      color: #253e72;
+    }
+
+    p {
+      max-width: 9rem;
+      font-size: clamp(0.9rem, 0.9vw, 1rem);
+      line-height: 1.35;
+      color: #8a8a8a;
+    }
+  }
+
+  .icon-wrapper {
+    width: clamp(4rem, 4.5vw, 4.75rem);
+    height: clamp(4rem, 4.5vw, 4.75rem);
+    flex-shrink: 0;
+
+    img {
+      width: clamp(2.4rem, 2.6vw, 3rem);
+      height: clamp(2.4rem, 2.6vw, 3rem);
+    }
   }
 
   .testimonials {
@@ -133,6 +171,10 @@
     background: rgba(255, 255, 255, 0.42);
     border: 1px solid rgba(255, 255, 255, 0.65);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+
+    p {
+      line-height: 1.6;
+    }
   }
 
   .comment1 {
