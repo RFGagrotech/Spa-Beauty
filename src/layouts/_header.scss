@@ -17,7 +17,6 @@
     90deg,
     #d6e8cf 30%,
     #e9f4e6 100%);
-
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   overflow: visible;
@@ -83,6 +82,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  .center ul li a {
+    display: flex;
+    gap: 0.8rem;
   }
 
   .icons {

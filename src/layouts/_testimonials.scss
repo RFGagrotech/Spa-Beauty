@@ -101,3 +101,86 @@
 }
 
 // DESKTOP
+@media (min-width: 75rem) {
+.treatments {
+    position: absolute;
+    left: clamp(4rem, 8vw, 9.5rem);
+    bottom: clamp(4rem, 6vw, 7rem);
+    width: clamp(34rem, 38vw, 44rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 1.5vw, 1.8rem);
+    padding: clamp(1.5rem, 2vw, 2rem);
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.08);
+    z-index: 10;
+  }
+
+  .treatment-card {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .treatment-card h2 {
+    margin-top: 1.2rem;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+    color: #264065;
+  }
+
+  .treatment-card p {
+    margin-top: 0.8rem;
+    font-size: clamp(0.95rem, 1vw, 1.15rem);
+    line-height: 1.4;
+    color: #8a8f95;
+  }
+
+  .testimonials {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    pointer-events: none;
+    z-index: 8;
+  }
+
+  .comment {
+    position: absolute;
+    width: clamp(20rem, 22vw, 27rem);
+    padding: clamp(1.4rem, 1.6vw, 2rem);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: none;
+  }
+
+  .comment1 {
+    right: clamp(3rem, 6vw, 8rem);
+    top: clamp(17rem, 19vw, 23rem);
+  }
+
+  .comment2 {
+    right: clamp(6rem, 9vw, 12rem);
+    bottom: clamp(3rem, 4vw, 5rem);
+  }
+
+  .comment p {
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    line-height: 1.45;
+    color: #111;
+  }
+
+  .comment img {
+    width: clamp(1.8rem, 2vw, 2.4rem);
+  }
+
+  .comment .author {
+    color: #264065;
+  }
+
+  .footer-band {
+    display: none;
+  }
+}
