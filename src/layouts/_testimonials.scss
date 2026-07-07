@@ -105,8 +105,7 @@
 .treatments {
     position: absolute;
     left: clamp(4rem, 8vw, 9.5rem);
-    bottom: clamp(4rem, 6vw, 7rem);
-    width: clamp(34rem, 38vw, 44rem);
+    width: clamp(27rem, 29vw, 31rem);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(1rem, 1.5vw, 1.8rem);

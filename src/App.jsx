@@ -6,9 +6,11 @@ import Testimonials from "./components/Testimonials";
 function App() {
     return(
         <>
+        <main className="home-hero">
             <Header />
             <Hero />
             <Testimonials />
+        </main>
         </>
     )
 }
