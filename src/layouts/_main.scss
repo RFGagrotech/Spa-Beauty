@@ -174,7 +174,7 @@ display: none;
     grid-template-areas:
       "text media"
       "actions media";
-    min-height: clamp(42rem, 48vw, 56rem);
+    min-height: calc(100vh - 5rem);
     column-gap: 0;
     align-items: stretch;
   }
@@ -211,7 +211,7 @@ display: none;
     align-self: start;
     justify-content: flex-start;
     gap: clamp(2rem, 3vw, 3.5rem);
-    margin-top: clamp(-9rem,-10vh,-11rem);
+    margin-top: clamp(-11rem,-12vh,-13rem);
     padding: 0;
     z-index: 6;
   }
@@ -258,7 +258,7 @@ display: none;
   .hero-vector {
     position: absolute;
     top: clamp(1rem, 3vw, 4rem);
-    right: clamp(1rem, 5vw, 7rem);
+    right: clamp(0rem, 1vw, 1rem);
     width: clamp(32rem, 38vw, 48rem);
     opacity: 0.16;
     transform: none;
@@ -266,12 +266,11 @@ display: none;
   }
 
   .hero-woman {
-    position: absolute;
-    right: clamp(0.2rem,0.5vw,0.75rem);
+    position: relative;
+    right: clamp(4rem,8vw,9rem);
+    height: clamp(45rem,47vh,50rem);
     bottom: 0;
-    width: clamp(54rem, 62vw, 78rem);
-    max-width: none;
-    height: auto;
+    width: auto;
     z-index: 3;
   }
 }

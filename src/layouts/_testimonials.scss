@@ -104,6 +104,7 @@
 @media (min-width: 75rem) {
 .treatments {
     position: absolute;
+    bottom: clamp(0rem, 1vh,2rem);
     left: clamp(4rem, 8vw, 9.5rem);
     width: clamp(27rem, 29vw, 31rem);
     display: grid;
@@ -157,7 +158,7 @@
 
   .comment1 {
     right: clamp(3rem, 6vw, 8rem);
-    top: clamp(17rem, 19vw, 23rem);
+    top: clamp(11rem, 19vw, 23rem);
   }
 
   .comment2 {
