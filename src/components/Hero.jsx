@@ -1,4 +1,4 @@
-import play from "../img/play.svg";
+import play from "../img/Play.svg";
 import woman from "../img/img1.png";
 import woman1 from "../img/woman2.png";
 import vector from "../img/Vector.svg";
