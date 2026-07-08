@@ -211,7 +211,7 @@ display: none;
     align-self: start;
     justify-content: flex-start;
     gap: clamp(2rem, 3vw, 3.5rem);
-    margin-top: clamp(-11rem,-12vh,-13rem);
+    margin-top: clamp(-13rem, -19vh, -19rem);
     padding: 0;
     z-index: 6;
   }
@@ -267,8 +267,8 @@ display: none;
 
   .hero-woman {
     position: relative;
-    right: clamp(4rem,8vw,9rem);
-    height: clamp(45rem,47vh,50rem);
+    right: clamp(1vw,10vw,15rem);
+    height: clamp(58vh,83vh,83rem);
     bottom: 0;
     width: auto;
     z-index: 3;
