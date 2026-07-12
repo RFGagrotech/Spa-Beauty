@@ -75,7 +75,6 @@
 /* =========================
    IPAD
 ========================= */
-
 @media (min-width: 48rem) {
   .icon-wrapper {
     position: relative;
@@ -100,18 +99,18 @@
   }
 }
 
-// DESKTOP
+// DESKTOP 1200px
 @media (min-width: 75rem) {
 .treatments {
     position: absolute;
-    bottom: clamp(0rem, -2vw, 0rem);
+    bottom: clamp(2rem, 4vh, 6rem);
     left: clamp(4rem, 8vw, 9.5rem);
-    width: clamp(27rem, 29vw, 31rem);
-    max-height: clamp(10rem,33vh,40rem);
+    width: clamp(25rem, 27vw, 31rem);
+    max-height: clamp(10rem,32vh,37rem);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(0.5rem, 1.5vw, 3rem);
-    padding: clamp(1rem, 1.5vw, 2rem);
+    gap: clamp(0.5rem, 1vw, 2rem);
+    padding: clamp(0.7rem, 1vw, 1.5rem);
     background: #fff;
     border-radius: 1.2rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.08);
@@ -128,13 +127,13 @@
   }
 
   .treatment-card h2 {
-    margin-top: clamp(0.2rem, 0.5rem,1rem);
+    margin-top: clamp(0.2rem, 0.5rem,0.7rem);
     font-size: clamp(1.8rem, 2vw, 2.4rem);
     color: #264065;
   }
 
   .treatment-card p {
-    margin-top: 0.8rem;
+    margin-top: 0rem;
     font-size: clamp(0.95rem, 1vw, 1.15rem);
     line-height: 1.4;
     color: #8a8f95;
@@ -150,21 +149,23 @@
 
   .comment {
     position: absolute;
-    width: clamp(20rem, 26vw, 30rem);
-    padding: clamp(1.4rem, 1.6vw, 2rem);
+    width: clamp(20rem, 28vw, 38rem);
+    padding: clamp(1rem, 1.4vw, 1.8rem);
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.52);
     box-shadow: none;
   }
 
   .comment1 {
-    right: clamp(0rem, 5vw, 12vw);
-    top: clamp(9rem, 11vw, 15vw);
+    right: clamp(1rem, 7vw, 12vw);
+    top: clamp(11rem, 16vw, 19vw);
+    height: clamp(15rem, 27vh, 28rem);
   }
 
   .comment2 {
     right: clamp(6rem, 12vw, 16vw);
-    bottom: clamp(3rem, 4vw, 8vw);
+    bottom: clamp(1rem, 2vw, 8vw);
+    height: clamp(15rem, 27vh, 28rem);
   }
 
   .comment p {
