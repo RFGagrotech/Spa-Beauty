@@ -186,3 +186,15 @@
     display: none;
   }
 }
+
+@media (min-width: 100em) {
+  .treatments{
+    bottom: clamp(1rem,2vh,4rem);
+  }
+
+  .comment {
+    height: clamp(17rem, 30vh, 41rem);
+  }
+
+
+}

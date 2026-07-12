@@ -274,3 +274,11 @@ display: none;
     z-index: 3;
   }
 }
+
+@media (min-width: 100em) {
+
+  .hero-woman {
+    right: clamp(3rem,3vw,5rem);
+  }
+
+}
