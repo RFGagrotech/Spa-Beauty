@@ -1,0 +1,664 @@
+@use "../abstracts/" as abs;
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+
+  background: abs.$hero-color;
+}
+
+
+.hero-inner {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem 1rem;
+
+  gap: 2rem;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.hero-text {
+  width: 100%;
+
+  text-align: center;
+
+  h1 {
+    margin: 0;
+
+    font-size: clamp(
+      2rem,
+      9vw,
+      2.75rem
+    );
+
+    line-height: 1.1;
+    font-weight: 700;
+
+    color: abs.$button-color;
+  }
+
+  p {
+    max-width: 32rem;
+
+    margin: 1.25rem auto 0;
+
+    font-size: clamp(
+      1rem,
+      4vw,
+      1.15rem
+    );
+
+    line-height: 1.6;
+
+    color: abs.$text-color;
+  }
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.hero-actions {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: clamp(
+    1rem,
+    5vw,
+    2rem
+  );
+}
+
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 3.2rem;
+
+  padding: 0.8rem 1.3rem;
+
+  border: 2px solid abs.$button-color;
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.hero-btn-primary {
+  background: abs.$button-color;
+  color: #ffffff;
+
+  &:focus-visible {
+    background: #ffffff;
+    color: abs.$button-color;
+  }
+}
+
+
+.hero-btn-video {
+  padding: 0;
+
+  gap: 0.7rem;
+
+  border-color: transparent;
+
+  background: transparent;
+  color: abs.$button-color;
+
+  .circle {
+    width: 3rem;
+    height: 3rem;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    img {
+      width: 0.9rem;
+      height: auto;
+    }
+  }
+}
+
+
+/* =========================
+   IMAGEN
+========================= */
+
+.hero-media {
+  position: relative;
+
+  width: 100%;
+  min-height: clamp(
+    19rem,
+    85vw,
+    28rem
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #ddefd8;
+}
+
+
+/* El panel de desktop no se necesita
+   todavía en mobile */
+
+.hero-panel {
+  display: none;
+}
+
+
+/* VECTOR DECORATIVO */
+
+.hero-vector {
+  position: absolute;
+
+  left: 50%;
+  bottom: 1rem;
+
+  width: min(
+    19rem,
+    80vw
+  );
+
+  transform: translateX(-50%);
+
+  opacity: 0.25;
+
+  z-index: 1;
+}
+
+
+/* MUJER */
+
+.hero-woman {
+  position: relative;
+
+  width: min(
+    32rem,
+    115vw
+  );
+
+  max-width: none;
+  height: auto;
+
+  z-index: 2;
+}
+
+/* =========================
+   HERO - IPAD / TABLET
+   768px - 1199px
+========================= */
+
+@media (min-width: 48em) {
+
+  .hero {
+    padding: 3rem 2rem;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 2rem;
+  }
+
+
+  /* =========================
+     CONTENIDO IZQUIERDO
+  ========================= */
+
+  .hero-content {
+    width: 100%;
+
+    padding: 0;
+
+    gap: 2rem;
+
+    align-self: center;
+  }
+
+
+  /* =========================
+     TEXTO
+  ========================= */
+
+  .hero-text {
+    text-align: center;
+
+    h1 {
+      padding: 0;
+
+      font-size: clamp(
+        2.75rem,
+        5vw,
+        4rem
+      );
+
+      line-height: 1.15;
+    }
+
+    p {
+      max-width: 28rem;
+
+      margin: 1.5rem auto 0;
+
+      font-size: clamp(
+        1.1rem,
+        2vw,
+        1.5rem
+      );
+
+      line-height: 1.6;
+    }
+  }
+
+
+  /* =========================
+     BOTONES
+  ========================= */
+
+  .hero-actions {
+    justify-content: center;
+
+    padding: 0;
+
+    gap: 1.5rem;
+  }
+
+
+  /* =========================
+     IMAGEN
+  ========================= */
+
+  .hero-media {
+    min-height: 29rem;
+
+    border-radius: 0 0 0 6rem;
+
+    background: #ddefd8;
+  }
+
+  .hero-vector {
+    width: min(
+      24rem,
+      42vw
+    );
+
+    left: 50%;
+    bottom: 3rem;
+
+    transform:
+      translateX(-50%)
+      translateY(-6rem);
+  }
+
+  .hero-woman {
+    width: min(
+      40rem,
+      125vw
+    );
+  }
+}
+/* =========================
+   HERO - DESKTOP
+   >= 1200px
+========================= */
+
+@media (min-width: 75em) {
+
+  .hero {
+    position: relative;
+
+    width: 100%;
+
+    padding: 0 clamp(
+      3rem,
+      6vw,
+      8rem
+    );
+
+    overflow: visible;
+
+    background: linear-gradient(
+      90deg,
+      abs.$hero-color 0 40%,
+      abs.$aside-color 40% 100%
+    );
+  }
+
+
+  /* =========================
+     ESTRUCTURA
+  ========================= */
+
+  .hero-inner {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 45%)
+      minmax(0, 55%);
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-height: calc(
+      100vh - 6rem
+    );
+
+    gap: 0;
+  }
+
+
+  /* =========================
+     CONTENIDO IZQUIERDO
+  ========================= */
+
+  .hero-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: none;
+
+    padding:
+      clamp(4rem, 7vh, 7rem)
+      0
+      clamp(2rem, 4vh, 4rem);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: clamp(
+      2rem,
+      3vh,
+      3rem
+    );
+
+    z-index: 5;
+  }
+
+
+  /* =========================
+     TEXTO
+  ========================= */
+
+  .hero-text {
+    width: 100%;
+
+    text-align: left;
+
+    h1 {
+      max-width: clamp(
+        34rem,
+        42vw,
+        48rem
+      );
+
+      padding: 0;
+      margin: 0;
+
+      font-size: clamp(
+        3.8rem,
+        4.4vw,
+        5.7rem
+      );
+
+      line-height: 1;
+
+      text-align: left;
+
+      color: abs.$button-color;
+    }
+
+    p {
+      max-width: clamp(
+        32rem,
+        39vw,
+        44rem
+      );
+
+      margin:
+        clamp(1.25rem, 2vh, 2rem)
+        0
+        0;
+
+      font-size: clamp(
+        1.15rem,
+        1.35vw,
+        1.65rem
+      );
+
+      line-height: 1.55;
+
+      text-align: left;
+
+      color: abs.$text-color;
+    }
+  }
+
+
+  /* =========================
+     BOTONES
+  ========================= */
+
+  .hero-actions {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    gap: clamp(
+      1.5rem,
+      2.5vw,
+      3rem
+    );
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+
+  .hero-btn-primary {
+    min-width: clamp(
+      9rem,
+      10vw,
+      12rem
+    );
+
+    background: abs.$button-color;
+    color: #ffffff;
+
+    &:hover {
+      background: #ffffff;
+      color: abs.$button-color;
+    }
+  }
+
+
+  .hero-btn-video {
+    border-color: transparent;
+
+    background: transparent;
+
+    color: abs.$button-color;
+
+    .circle {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      display: grid;
+      place-items: center;
+
+      flex-shrink: 0;
+
+      background: #ffffff;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 1.5rem 3rem
+        rgba(0, 0, 0, 0.12);
+    }
+  }
+
+
+  /* =========================
+     COLUMNA IMAGEN
+  ========================= */
+
+  .hero-media {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 100%;
+
+    align-self: stretch;
+
+    overflow: visible;
+
+    background: transparent;
+
+    border-radius: 0;
+  }
+
+
+  /* =========================
+     PANEL
+  ========================= */
+
+  .hero-panel {
+    position: absolute;
+
+    display: block;
+
+    right: 0;
+    bottom: 0;
+
+    width: 80%;
+    height: 78%;
+
+    border-radius:
+      clamp(3rem, 5vw, 6rem)
+      0
+      0
+      0;
+
+    background: rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+
+    z-index: 1;
+  }
+
+
+  /* =========================
+     VECTOR
+  ========================= */
+
+  .hero-vector {
+    position: absolute;
+
+    top: clamp(
+      0rem,
+      3vw,
+      4rem
+    );
+
+    right: clamp(
+      0rem,
+      1vw,
+      1rem
+    );
+
+    left: auto;
+    bottom: auto;
+
+    width: clamp(
+      32rem,
+      38vw,
+      48rem
+    );
+
+    transform: none;
+
+    opacity: 0.16;
+
+    z-index: 2;
+  }
+
+
+  /* =========================
+     MUJER
+  ========================= */
+
+  .hero-woman {
+    position: absolute;
+
+    right: clamp(
+      -5rem,
+      -3vw,
+      0rem
+    );
+
+    bottom: 0;
+
+    width: auto;
+
+    height: clamp(
+      42rem,
+      80vh,
+      58rem
+    );
+
+    max-width: none;
+
+    z-index: 3;
+  }
+}
