@@ -222,6 +222,9 @@
 
   .header .aside .auth li:last-child:hover {
     color: #264065;
-    background: abs.$aside-color 
+      background: linear-gradient(
+    90deg,
+    #d6e8cf 30%,
+    #e9f4e6 100%);
   }
 }
